@@ -1,8 +1,23 @@
 package org.project.object.consumables;
 
-// TODO: UPDATE IMPLEMENTATION
+import org.project.entity.Entity;
+
 public abstract class Consumable {
-    /*
-    TODO: ADD OTHER REQUIRED AND BONUS METHODS
-    */
+    private String name;
+    private int effectValue;
+
+    public Consumable(String name, int effectValue) {
+        this.name = name;
+        this.effectValue = effectValue;
+    }
+
+    public abstract void use(Entity target); 
+
+    public String getName() {
+        return name;
+    }
+
+    public int getEffectValue() {
+        return effectValue;
+    }
 }
