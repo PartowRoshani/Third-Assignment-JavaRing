@@ -13,6 +13,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
+
         System.out.println("Choose your character: 1. Knight  2. Assassin  3. Wizard");
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -106,6 +108,7 @@ public class Main {
                     case 1:
                         System.out.println(player.getName() + " attacks with " + player.getWeapon().getName() + "!");
                         enemy.takeDamage(player.getWeapon().getDamage());
+
                         break;
                     case 2:
                         System.out.println(player.getName() + " uses their special ability!");
