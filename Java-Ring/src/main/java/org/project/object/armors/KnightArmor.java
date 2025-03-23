@@ -1,13 +1,12 @@
 package org.project.object.armors;
 
-import org.project.entity.players.Knight;
+import org.project.entity.Entity;
 
 public class KnightArmor extends Armor {
-
     private static final int MANA_DRAIN = 5;
 
     public KnightArmor() {
-        super("Knight Armor",40 , 100);
+        super("Knight Armor", 40, 100);
     }
 
     @Override
@@ -21,4 +20,9 @@ public class KnightArmor extends Armor {
     public int drainMana() {
         return MANA_DRAIN;
     }
+
+    @Override
+    public void use(Entity target) {
+    }
 }
+

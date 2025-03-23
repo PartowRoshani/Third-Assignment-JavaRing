@@ -18,29 +18,25 @@ public class Assassin extends Player{
 
     @Override
     public void useAbility(Entity target) {
-        if (!isInvisible)
-        {
-            if (getMp() >= STEALTH_COST)
-            {
+        if (!isInvisible) {
+            if (getMp() >= STEALTH_COST) {
                 fillMana(-STEALTH_COST);
                 isInvisible = true;
                 stealthRoundsLeft = STEALTH_DURATION;
                 System.out.println(getName() + " has entered stealth mode! Cannot be attacked for " + STEALTH_DURATION + " rounds.");
-            }
-            else
-            {
+            } else {
                 System.out.println(getName() + " does not have enough mana to enter stealth mode!");
             }
-        }
-        else
-        {
+        } else {
             int backstabDamage = getWeapon().getDamage() * 2;
             target.takeDamage(backstabDamage);
             System.out.println(getName() + " performs a deadly backstab, dealing " + backstabDamage + " damage!");
             isInvisible = false;
             stealthRoundsLeft = 0;
+            System.out.println(getName() + " is no longer invisible!");
         }
     }
+
 
     public void nextTurn() {
         if (isInvisible && stealthRoundsLeft > 0)

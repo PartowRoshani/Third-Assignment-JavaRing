@@ -1,14 +1,13 @@
 package org.project.object.weapons;
 
 import org.project.entity.Entity;
-
 import java.util.ArrayList;
 
 public class Sword extends Weapon {
     private int abilityCharge;
 
     public Sword() {
-        super("Sword", "A sharp blade used for cutting enemies.", 25, 5);
+        super("Sword", 25, 5);
         this.abilityCharge = 0;
     }
 
@@ -18,7 +17,6 @@ public class Sword extends Weapon {
         System.out.println(getName() + " slashes " + target.getName() + " for " + getDamage() + " damage!");
     }
 
-    // Unique Ability: Multi-target attack
     public void uniqueAbility(ArrayList<Entity> targets) {
         abilityCharge += 2;
         for (Entity target : targets) {
@@ -27,4 +25,5 @@ public class Sword extends Weapon {
         }
     }
 }
+
 

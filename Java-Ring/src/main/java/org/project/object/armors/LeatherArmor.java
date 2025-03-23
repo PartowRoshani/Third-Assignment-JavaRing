@@ -1,5 +1,6 @@
 package org.project.object.armors;
 
+import org.project.entity.Entity;
 import org.project.entity.players.Assassin;
 
 public class LeatherArmor extends Armor {
@@ -14,6 +15,11 @@ public class LeatherArmor extends Armor {
     public void applyBonus(Assassin assassin) {
         assassin.increaseAgility(agilityBonus);
         System.out.println(assassin.getName() + " equipped Leather Armor and gained " + agilityBonus + " agility!");
+    }
+
+    @Override
+    public void use(Entity target) {
+
     }
 }
 

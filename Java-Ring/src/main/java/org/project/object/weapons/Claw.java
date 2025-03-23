@@ -8,7 +8,7 @@ public class Claw extends Weapon {
     private Random random;
 
     public Claw() {
-        super("Claw", "A razor-sharp claw that allows for quick multiple strikes.", 12, 4);
+        super("Claw", 12, 4);
         this.random = new Random();
     }
 

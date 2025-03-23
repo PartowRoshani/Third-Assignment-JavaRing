@@ -7,7 +7,7 @@ import org.project.object.armors.Armor;
 public abstract class Enemy implements Entity {
     Weapon weapon;
     Armor armor;
-    private int hp;
+    int hp;
     private final int maxHP;
     private int mp;
     private final int maxMP;
@@ -127,6 +127,13 @@ public abstract class Enemy implements Entity {
     }
 
 
+
+
     public abstract void useAbility(Entity target);
     public abstract String getName();
+
+    int turn = 0;
+    public int nextTurn() {
+        return turn++;
+    }
 }

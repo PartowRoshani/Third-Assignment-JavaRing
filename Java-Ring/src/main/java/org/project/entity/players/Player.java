@@ -47,16 +47,30 @@ public abstract class Player implements Entity {
 
     @Override
     public void takeDamage(int damage) {
+        if (this instanceof Assassin && ((Assassin) this).isInvisible) {
+            System.out.println(name + " is in stealth mode and avoids the attack!");
+            return;
+        }
+
         int armorDefense = (armor != null) ? armor.getDefense() : 0;
+
         if (isDefending) {
-            damage /= 2; // Reduce damage by half when defending
+            damage /= 2;
             isDefending = false;
             System.out.println(name + " successfully defended! Damage reduced.");
         }
-        int finalDamage = Math.max(0, damage - armorDefense);
+
+        int finalDamage = damage - armorDefense;
+
+        if (finalDamage <= 0) {
+            System.out.println(name + " blocked the attack! No damage taken.");
+            return;
+        }
+
         hp = Math.max(0, hp - finalDamage);
         System.out.println(name + " took " + finalDamage + " damage! Remaining HP: " + hp);
     }
+
 
     @Override
     public void heal(int health) {

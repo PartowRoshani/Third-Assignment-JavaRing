@@ -1,5 +1,6 @@
 package org.project.object.armors;
 
+import org.project.entity.Entity;
 import org.project .entity.enemies.Skeleton;
 public class PlateArmor extends Armor {
 
@@ -20,5 +21,10 @@ public class PlateArmor extends Armor {
             int reducedDamage = (int) (damage * 0.6); // 40% کاهش آسیب
             super.takeDamage(reducedDamage);
         }
+    }
+
+    @Override
+    public void use(Entity target) {
+
     }
 }

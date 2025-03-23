@@ -18,23 +18,25 @@ public class Knight extends Player {
 
     @Override
     public void useAbility(Entity target) {
-        if (roundsPassed >= KICK_COOLDOWN) {
-            if (getMp() >= KICK_MANA_COST) {
-                fillMana(-KICK_MANA_COST); // Reduce mana for the kick
-                int kickDamage = 25;
-                target.takeDamage(kickDamage);
-                System.out.println(getName() + " performs a powerful kick, dealing " + kickDamage + " damage!");
-                roundsPassed = 0; // Reset cooldown
-            } else {
-                System.out.println(getName() + " does not have enough mana to use Kick Attack!");
-            }
-        } else {
+        if (roundsPassed < KICK_COOLDOWN) {
             System.out.println(getName() + " cannot use Kick Attack yet! " + (KICK_COOLDOWN - roundsPassed) + " turns left.");
+            return;
+        }
+
+        if (getMp() >= KICK_MANA_COST) {
+            fillMana(-KICK_MANA_COST);
+            int kickDamage = 25;
+            target.takeDamage(kickDamage);
+            System.out.println(getName() + " performs a powerful kick, dealing " + kickDamage + " damage!");
+            roundsPassed = 0;
+        } else {
+            System.out.println(getName() + " does not have enough mana to use Kick Attack!");
         }
     }
 
-    // This method should be called each round to increment roundsPassed for cooldown
+
     public void nextTurn() {
         roundsPassed++;
     }
 }
+

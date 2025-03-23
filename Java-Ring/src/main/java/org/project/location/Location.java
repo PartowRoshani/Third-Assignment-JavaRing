@@ -1,40 +1,32 @@
 package org.project.location;
 
 import org.project.entity.enemies.Enemy;
-import java.util.ArrayList;
 
 public class Location {
-    private String name;
-    private ArrayList<Location> connectedLocations;
-    private ArrayList<Enemy> enemies;
+    private final String name;
+    private final boolean isSafe;
+    private final Enemy enemy;
 
-    public Location(String name) {
+    public Location(String name, boolean isSafe, Enemy enemy) {
         this.name = name;
-        this.connectedLocations = new ArrayList<>();
-        this.enemies = new ArrayList<>();
-    }
-
-    public void addConnectedLocation(Location location) {
-        connectedLocations.add(location);
-    }
-
-    public void addEnemy(Enemy enemy) {
-        enemies.add(enemy);
-    }
-
-    public void resetLocation() {
-        enemies.clear();
+        this.isSafe = isSafe;
+        this.enemy = enemy;
     }
 
     public String getName() {
         return name;
     }
 
-    public ArrayList<Location> getConnectedLocations() {
-        return connectedLocations;
+    public boolean isSafe() {
+        return isSafe;
     }
 
-    public ArrayList<Enemy> getEnemies() {
-        return enemies;
+    public Enemy getEnemy() {
+        return enemy;
+    }
+
+    @Override
+    public String toString() {
+        return "Location: " + name + (isSafe ? " (Safe)" : " (Dangerous)");
     }
 }

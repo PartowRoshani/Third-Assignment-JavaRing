@@ -1,5 +1,6 @@
 package org.project.object.armors;
 
+import org.project.entity.Entity;
 import org.project.entity.players.Player;
 
 public class ScaleArmor extends Armor {
@@ -17,4 +18,8 @@ public class ScaleArmor extends Armor {
         System.out.println(getName() + " reduces physical damage by " + (int)(physicalResistance * 100) + "%!");
     }
 
+    @Override
+    public void use(Entity target) {
+
+    }
 }

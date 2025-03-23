@@ -7,7 +7,7 @@ public class Staff extends Weapon {
     private int abilityCharge;
 
     public Staff() {
-        super("Staff", "A mystical staff that channels powerful magical energy.", 20, 8);
+        super("Staff", 20, 8);
         this.abilityCharge = 0;
     }
 

@@ -3,7 +3,6 @@ package org.project.object.consumables;
 import org.project.entity.Entity;
 
 public class Flask extends Consumable {
-
     public Flask() {
         super("Health Flask", 50);
     }
@@ -17,3 +16,4 @@ public class Flask extends Consumable {
         }
     }
 }
+

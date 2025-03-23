@@ -2,9 +2,7 @@ package org.project.object;
 
 import org.project.entity.Entity;
 
-public interface Object {
+public interface gameObject {
     void use(Entity target);
-
     String getName();
-    String getDescription();
 }

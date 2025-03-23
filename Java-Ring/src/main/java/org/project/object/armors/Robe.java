@@ -1,5 +1,6 @@
 package org.project.object.armors;
 
+import org.project.entity.Entity;
 import org.project.entity.players.Wizard;
 
 public class Robe extends Armor {
@@ -14,5 +15,10 @@ public class Robe extends Armor {
     public void applyBonus(Wizard wizard) {
         wizard.fillMana(manaBonus);
         System.out.println(wizard.getName() + " equipped a magical robe and gained " + manaBonus + " mana!");
+    }
+
+    @Override
+    public void use(Entity target) {
+
     }
 }
