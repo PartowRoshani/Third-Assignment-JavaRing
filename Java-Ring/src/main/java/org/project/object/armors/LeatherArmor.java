@@ -3,6 +3,7 @@ package org.project.object.armors;
 import org.project.entity.Entity;
 import org.project.entity.players.Assassin;
 
+//for Assassin and Goblin
 public class LeatherArmor extends Armor {
     private final int agilityBonus;
 

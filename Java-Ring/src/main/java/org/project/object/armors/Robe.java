@@ -3,6 +3,7 @@ package org.project.object.armors;
 import org.project.entity.Entity;
 import org.project.entity.players.Wizard;
 
+//for wizard
 public class Robe extends Armor {
     private final int manaBonus;
 

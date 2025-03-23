@@ -3,6 +3,7 @@ package org.project.object.weapons;
 import org.project.entity.Entity;
 import java.util.ArrayList;
 
+//for knight and Skeleton
 public class Sword extends Weapon {
     private int abilityCharge;
 

@@ -1,8 +1,9 @@
 package org.project.object.armors;
 
 import org.project.entity.Entity;
-import org.project.entity.players.Player;
+import org.project.entity.enemies.Dragon;
 
+//for Dragon
 public class ScaleArmor extends Armor {
     private final double physicalResistance;
 

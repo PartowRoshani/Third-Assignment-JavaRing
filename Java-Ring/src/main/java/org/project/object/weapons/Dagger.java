@@ -2,6 +2,7 @@ package org.project.object.weapons;
 
 import org.project.entity.Entity;
 
+//for Assassin and Goblin
 public class Dagger extends Weapon {
     private int abilityCharge;
 

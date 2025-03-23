@@ -3,6 +3,7 @@ package org.project.object.weapons;
 import org.project.entity.Entity;
 import java.util.Random;
 
+//for Dragon
 public class Claw extends Weapon {
     private static final int MAX_HITS = 3; // Claw can hit up to 3 times in one attack
     private Random random;

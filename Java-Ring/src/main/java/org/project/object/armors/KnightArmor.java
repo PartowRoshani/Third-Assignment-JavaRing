@@ -2,6 +2,7 @@ package org.project.object.armors;
 
 import org.project.entity.Entity;
 
+//for knight
 public class KnightArmor extends Armor {
     private static final int MANA_DRAIN = 5;
 

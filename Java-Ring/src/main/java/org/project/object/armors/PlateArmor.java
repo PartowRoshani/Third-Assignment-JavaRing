@@ -2,6 +2,8 @@ package org.project.object.armors;
 
 import org.project.entity.Entity;
 import org.project .entity.enemies.Skeleton;
+
+// for Skeleton
 public class PlateArmor extends Armor {
 
 
